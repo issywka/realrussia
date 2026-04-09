@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Real Russia — масштабная CRMP-игра на мобильных устройствах. Построй свою империю!">
+    <title>REAL RUSSIA | Официальный сайт</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Удалено EmailJS SDK -->
+</head>
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-left">
+            <a href="#" class="logo">REAL <span> RUSSIA</span></a>
+            <div class="nav-status">
+                <span class="badge-dot" style="background:#0057ff; box-shadow: 0 0 8px #0057ff;"></span> В РАЗРАБОТКЕ
+            </div>
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <a href="#roles" class="nav-link">О ПРОЕКТЕ</a>
+            <a href="#features" class="nav-link">ВОЗМОЖНОСТИ</a>
+            <a href="http://wh31146.web3.maze-tech.ru/" class="nav-link" target="_blank">ФОРУМ</a>
+        </nav>
+        <div class="nav-right">
+            <a href="https://t.me/realhubgames" class="nav-btn-social" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="margin-right: 8px;">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2s-.16-.04-.24-.02c-.11.02-1.79 1.14-5.06 3.34-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.87-.44-.75-.24-1.35-.37-1.3-.79.03-.22.33-.44.89-.66 3.5-1.52 5.83-2.53 7-3.01 3.33-1.39 4.02-1.63 4.48-1.64.1-.01.32.02.47.14.13.1.17.24.19.35.01.07.02.2.01.32z" />
+                </svg>
+                TELEGRAM
+            </a>
+            <button class="btn-blue" style="padding: 10px 20px; font-size:0.85rem;" id="nav-cta-btn">ПОПОЛНИТЬ
+                СЧЁТ</button>
+            <button class="burger" id="burger-btn" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="red_square_bg.png" alt="REAL RUSSIA">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-left">
+                <h1 class="hero-title">НАЧНИТЕ ИГРУ<br>НА REAL <span style="color: #0057ff;">RUSSIA</span></h1>
+                <p class="hero-sub">Уникальный проект, который дарит вам полную свободу действий и выбор собственного
+                    пути.</p>
+            </div>
+
+            <div class="hero-right">
+                <div class="download-card">
+                    <button class="btn-blue w-100" id="download-btn">СКАЧАТЬ С САЙТА</button>
+                    <p class="download-note">ТРЕБУЕТСЯ ANDROID 13.0 И ВЫШЕ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>СКРОЛЛ</span>
+        </div>
+    </section>
+
+    <!-- ==================== ROLES ==================== -->
+    <section class="roles-section" id="roles">
+        <div class="container" style="max-width: 1400px;">
+            <div class="section-header">
+                <span class="section-tag" style="border-color: #555; color: #fff;">РОЛИ</span>
+                <h2 class="section-title">Кем станешь <span class="red-text">ты?</span></h2>
+                <p class="section-desc">Выбирай любой путь и строй свою уникальную историю в нашем штате.</p>
+            </div>
+            <div class="roles-grid">
+                <div class="role-card" style="background-image: url('role_police.png');">
+                    <div class="role-overlay"></div>
+                    <div class="role-text">
+                        <div class="role-subtitle">Стань</div>
+                        <div class="role-title">полицейским</div>
+                    </div>
+                </div>
+                <div class="role-card" style="background-image: url('role_worker.png');">
+                    <div class="role-overlay"></div>
+                    <div class="role-text">
+                        <div class="role-subtitle">Стань</div>
+                        <div class="role-title">рабочим</div>
+                    </div>
+                </div>
+                <div class="role-card" style="background-image: url('role_bandit.png');">
+                    <div class="role-overlay"></div>
+                    <div class="role-text">
+                        <div class="role-subtitle">Стань</div>
+                        <div class="role-title">бандитом</div>
+                    </div>
+                </div>
+                <div class="role-card" style="background-image: url('role_doctor.png');">
+                    <div class="role-overlay"></div>
+                    <div class="role-text">
+                        <div class="role-subtitle">Стань</div>
+                        <div class="role-title">врачом</div>
+                    </div>
+                </div>
+                <div class="role-card" style="background-image: url('role_military.png');">
+                    <div class="role-overlay"></div>
+                    <div class="role-text">
+                        <div class="role-subtitle">Стань</div>
+                        <div class="role-title">военным</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== YOUR PATH ==================== -->
+    <section class="path-section" id="path">
+        <div class="path-bg">
+            <img src="red_square_bg.png" alt="Path Background">
+            <div class="path-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="path-content">
+                <h2 class="path-title">ТВОЙ ПУТЬ — <span class="red-text">ТВОИ ПРАВИЛА</span></h2>
+                <p class="path-description">
+                    Собери банду или организацию, займись преступными делами... Но всегда есть возможность перейти
+                    на светлую сторону. В любой момент ты можешь стать участником силовых структур и начать
+                    поддерживать порядок в штате, проворачивая громкие аресты гангстеров!
+                </p>
+                <div class="path-buttons">
+                    <button class="btn-path path-bad"
+                        onclick="document.getElementById('download-btn').click(); window.scrollTo({top: 0, behavior: 'smooth'});">&lt;
+                        ПУТЬ ВНЕ ЗАКОНА</button>
+                    <button class="btn-path path-good"
+                        onclick="document.getElementById('download-btn').click(); window.scrollTo({top: 0, behavior: 'smooth'});">ПУТЬ
+                        ЗА ЗАКОН &gt;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURES ==================== -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ВОЗМОЖНОСТИ</span>
+                <h2 class="section-title">Всё что тебе <span class="red-text">нужно</span></h2>
+            </div>
+
+            <div class="features-list">
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <span class="feature-num">01</span>
+                        <h3>🏎️ Автопарк</h3>
+                        <p>Более 300 реальных автомобилей — от советской классики до современных суперкаров. Тюнингуй,
+                            покупай, продавай на аукционе.</p>
+                        <ul class="feature-list">
+                            <li>Реальные марки и модели</li>
+                            <li>Полный тюнинг внешнего вида</li>
+                            <li>Страховка и угон</li>
+                            <li>Автоаукцион между игроками</li>
+                        </ul>
+                    </div>
+                    <div class="feature-img-block">
+                        <div class="feature-card-big">🏎️<br><small>АВТОПАРК</small></div>
+                    </div>
+                </div>
+
+                <div class="feature-row reverse">
+                    <div class="feature-text">
+                        <span class="feature-num">02</span>
+                        <h3>💼 20+ Профессий</h3>
+                        <p>Кем стать? Таксистом, инкассатором, полицейским, юристом, врачом или лидером криминальной
+                            группировки — выбор за тобой.</p>
+                        <ul class="feature-list">
+                            <li>Легальные и нелегальные работы</li>
+                            <li>Карьерный рост и звания</li>
+                            <li>Зарплата в реальном времени</li>
+                            <li>Уникальная форма и транспорт</li>
+                        </ul>
+                    </div>
+                    <div class="feature-img-block">
+                        <div class="feature-card-big">💼<br><small>ПРОФЕССИИ</small></div>
+                    </div>
+                </div>
+
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <span class="feature-num">03</span>
+                        <h3>🎙️ Голосовой чат</h3>
+                        <p>Встроенный пространственный голосовой чат. Слышишь только тех, кто рядом. Полное погружение в
+                            ролевую игру.</p>
+                        <ul class="feature-list">
+                            <li>Пространственный 3D-звук</li>
+                            <li>Рации для организаций</li>
+                            <li>Криптованные каналы</li>
+                            <li>Фильтрация шума</li>
+                        </ul>
+                    </div>
+                    <div class="feature-img-block">
+                        <div class="feature-card-big">🎙️<br><small>ГОЛОСОВОЙ ЧАТ</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROGRESS ==================== -->
+    <section class="progress-section" id="progress">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">РАЗРАБОТКА</span>
+                <h2 class="section-title">Мы в <span class="red-text">разработке</span></h2>
+                <p class="section-desc">Проект активно развивается. Вот текущее состояние ключевых систем:</p>
+            </div>
+
+            <div class="progress-grid">
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="p-icon">🗺️</span>
+                        <span class="p-title">Карта и мир</span>
+                        <span class="p-percent">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                    <p class="p-status">✅ Базовая карта готова. Добавляем детали районов.</p>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="p-icon">👤</span>
+                        <span class="p-title">Ролевая система</span>
+                        <span class="p-percent">100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                    <p class="p-status">🔧 Документы и организации готовы</p>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="p-icon">🏎️</span>
+                        <span class="p-title">Автопарк</span>
+                        <span class="p-percent">100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                    <p class="p-status">✅ Более 180 авто готовы.</p>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="p-icon">💰</span>
+                        <span class="p-title">Экономика</span>
+                        <span class="p-percent">50%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 70%"></div>
+                    </div>
+                    <p class="p-status">🔧 Банковская система и магазины в процессе.</p>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="p-icon">🎙️</span>
+                        <span class="p-title">Голосовой чат</span>
+                        <span class="p-percent">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                    <p class="p-status">✅ Почти готов, идёт тестирование стабильности.</p>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="p-icon">📱</span>
+                        <span class="p-title">Мобильный клиент</span>
+                        <span class="p-percent">40%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%"></div>
+                    </div>
+                    <p class="p-status">🔧 Оптимизация под Android в разработке.</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <h3 class="timeline-title">📅 Дорожная карта</h3>
+                <div class="timeline-items">
+                    <div class="tl-item done">
+                        <div class="tl-dot">✓</div>
+                        <div class="tl-content">
+                            <span class="tl-date">30 декабря 2025</span>
+                            <h4>Создание проекта</h4>
+                            <p>Основание команды, выбор движка, первые концепты.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item done">
+                        <div class="tl-dot">✓</div>
+                        <div class="tl-content">
+                            <span class="tl-date">15 января 2026</span>
+                            <h4>Альфа-версия</h4>
+                            <p>Прототип мира и базовые механики движения.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item active">
+                        <div class="tl-dot">●</div>
+                        <div class="tl-content">
+                            <span class="tl-date">31 марта 2026</span>
+                            <h4>Закрытое бета-тестирование</h4>
+                            <p>Первые игроки получат доступ. Сбор обратной связи.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot">○</div>
+                        <div class="tl-content">
+                            <span class="tl-date">10 апреля 2026</span>
+                            <h4>Открытый запуск</h4>
+                            <p>Официальный релиз для всех игроков!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== COMMUNITY ==================== -->
+    <section class="community-section" id="community">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">СООБЩЕСТВО</span>
+                <h2 class="section-title">Присоединяйся <span class="red-text">сейчас</span></h2>
+                <p class="section-desc">Наше сообщество уже растёт! Присоединяйся, будь в курсе последних новостей и
+                    получи ранний доступ.</p>
+            </div>
+
+            <div class="community-links">
+                <a href="https://dsc.gg/realrussia" target="_blank" class="social-card discord">
+                    <div class="sc-icon">
+                        <svg viewBox="0 0 127.14 96.36" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#5865F2"
+                                d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
+                        </svg>
+                    </div>
+                    <div class="sc-info">
+                        <h4>Discord</h4>
+                        <p>Главный чат сообщества</p>
+                        <span class="sc-members">→ Вступить</span>
+                    </div>
+                </a>
+                <a href="https://t.me/realhubgames" target="_blank" class="social-card telegram">
+                    <div class="sc-icon">
+                        <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="120" cy="120" r="120" fill="#2CA5E0" />
+                            <path fill="#fff"
+                                d="M81.229 128.772l14.237 39.406s1.78 3.687 3.686 3.687 30.255-29.492 30.255-29.492l31.525-60.89L81.737 118.6z" />
+                            <path fill="#c8daea"
+                                d="M100.106 138.878l-2.733 29.046s-1.144 8.9 7.754 0 17.415-15.763 17.415-15.763" />
+                            <path fill="#a9c9dd"
+                                d="M81.486 130.178l-40.32-13.01s-4.83-1.96-3.286-6.41c.324-.926 0.972-1.714 2.928-3.07 9.072-6.32 167.96-63.38 167.96-63.38s4.438-1.49 7.064-.5a3.82 3.82 0 0 1 2.606 2.81c.243.932.342 1.897.294 2.86-.057 1.017-.168 1.953-.29 3.32-.006.07-12.98 123.29-12.98 123.29s-.752 5.9-5.568 6.08a7.964 7.964 0 0 1-5.873-2.28c-14.675-12.64-65.48-46.83-76.77-54.39a2.16 2.16 0 0 1-.926-1.533c-.162-1.22.898-2.73.898-2.73s88.5-78.76 91.066-87.34c.183-.604-.477-.9-1.358-.636-5.928 2.18-108.63 67.1-119.85 74.1z" />
+                        </svg>
+                    </div>
+                    <div class="sc-info">
+                        <h4>Telegram</h4>
+                        <p>Новости и обновления</p>
+                        <span class="sc-members">→ Подписаться</span>
+                    </div>
+                </a>
+                <a href="#" class="social-card vk vk-soon" onclick="return false;">
+                    <div class="sc-icon">
+                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#1976d2" d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z" />
+                            <path fill="#fff"
+                                d="M35.44 26.28c-.32-.4-.23-.58 0-.94.005-.005 3.22-4.53 3.55-6.07l.01-.05c.17-.57 0-1-0.81-1h-2.67c-.68 0-1 .36-1.17.76 0 0-1.37 3.33-3.31 5.49-.63.63-.92.83-1.26.83-.17 0-.42-.2-.42-.77v-5.32c0-.68-.2-.99-.77-.99h-4.19c-.43 0-.69.32-.69.62 0 .65.97.8 1.07 2.63v3.97c0 .86-.15 1.02-.5 1.02-.92 0-3.15-3.35-4.47-7.18-.26-.75-.52-1.05-1.2-1.05H16.9c-.77 0-.92.36-.92.76 0 .71.92 4.24 4.28 8.9C22.45 32.05 25.27 33 27.8 33c1.52 0 1.71-.34 1.71-0.93v-2.4c0-.77.16-.92.7-.92.4 0 1.08.2 2.67 1.73C34.7 32.3 35 33 35.95 33h2.67c.77 0 1.16-.34.94-1.02-.25-.67-1.13-1.64-2.12-2.7z" />
+                        </svg>
+                    </div>
+                    <div class="sc-info">
+                        <h4>ВКонтакте <span class="soon-badge" style="font-size:0.6rem;">СКОРО</span></h4>
+                        <p>Официальная группа</p>
+                        <span class="sc-members" style="color:var(--text-muted);">Открытие скоро...</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Waiting Block -->
+            <div class="newsletter wait-opening" style="text-align: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 10px;">⌛ Ждем всех на открытии!</h3>
+                <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: var(--text-light);">
+                    Официальный запуск сервера состоится <span class="red-text"
+                        style="font-weight: 900; letter-spacing: 1px;">10 апреля 2026 года</span>.<br>Готовьтесь к
+                    невероятному опыту, мы делаем всё по красоте, чтобы глазам было приятно!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Часто задаваемые <span class="red-text">вопросы</span></h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">Когда выйдет игра? <span class="faq-arrow">▼</span></button>
+                    <div class="faq-answer">
+                        <p>Мы планируем открытый запуск <strong>10 апреля 2026 года</strong>. Закрытое бета-тестирование
+                            начнётся 31 марта 2026 года. Вступай в соцсети, чтобы не пропустить!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">На каких устройствах будет работать? <span
+                            class="faq-arrow">▼</span></button>
+                    <div class="faq-answer">
+                        <p>
+                            На старте игра будет доступна на <strong>Android</strong> (минимум Android 13.0+, 8 ГБ
+                            ОЗУ).<br><br>
+                            🍎 <strong>iOS</strong> — версия для iPhone и iPad сейчас находится в закрытом
+                            бета-тестировании. Полноценный выпуск планируется <strong>летом 2026 года</strong>. Следи за
+                            новостями в нашем Telegram и Discord!
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Игра будет платной? <span class="faq-arrow">▼</span></button>
+                    <div class="faq-answer">
+                        <p>Базовая игра — бесплатная. Донат-пакеты дают косметические и QoL-преимущества, не нарушая
+                            баланс.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Как попасть в бета-тест? <span class="faq-arrow">▼</span></button>
+                    <div class="faq-answer">
+                        <p>Вступи в наш Discord и следи за объявлениями. Первые 100 участников сообщества получат
+                            приоритетный доступ к закрытому бета-тесту.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Будет ли поддержка после релиза? <span
+                            class="faq-arrow">▼</span></button>
+                    <div class="faq-answer">
+                        <p>Да! Наша команда работает 24/7. Служба поддержки доступна через Discord, Telegram и
+                            встроенный тикет-систем в игре.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">REAL <span> RUSSIA</span></div>
+                    <p>Масштабный мобильный RP-сервер. В разработке с 2025 года.</p>
+                    <div class="footer-socials">
+                        <a href="https://dsc.gg/realrussia" target="_blank" class="footer-social-link discord-link">
+                            <svg viewBox="0 0 127.14 96.36" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                                <path fill="currentColor"
+                                    d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
+                            </svg>
+                            Discord
+                        </a>
+                        <a href="https://t.me/realhubgames" target="_blank" class="footer-social-link telegram-link">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                                <path fill="currentColor"
+                                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                            </svg>
+                            Telegram
+                        </a>
+                        <a href="#" class="footer-social-link vk-link" onclick="return false;"
+                            style="opacity:0.45; cursor:not-allowed;" title="ВКонтакте — скоро">
+                            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                                <path fill="currentColor"
+                                    d="M35.44 26.28c-.32-.4-.23-.58 0-.94.005-.005 3.22-4.53 3.55-6.07l.01-.05c.17-.57 0-1-.81-1h-2.67c-.68 0-1 .36-1.17.76 0 0-1.37 3.33-3.31 5.49-.63.63-.92.83-1.26.83-.17 0-.42-.2-.42-.77v-5.32c0-.68-.2-.99-.77-.99h-4.19c-.43 0-.69.32-.69.62 0 .65.97.8 1.07 2.63v3.97c0 .86-.15 1.02-.5 1.02-.92 0-3.15-3.35-4.47-7.18-.26-.75-.52-1.05-1.2-1.05H16.9c-.77 0-.92.36-.92.76 0 .71.92 4.24 4.28 8.9C22.45 32.05 25.27 33 27.8 33c1.52 0 1.71-.34 1.71-.93v-2.4c0-.77.16-.92.7-.92.4 0 1.08.2 2.67 1.73C34.7 32.3 35 33 35.95 33h2.67c.77 0 1.16-.34.94-1.02-.25-.67-1.13-1.64-2.12-2.7z" />
+                            </svg>
+                            ВКонтакте
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="fl-col">
+                        <h4>Навигация</h4>
+                        <a href="#roles">Роли</a>
+                        <a href="#features">Возможности</a>
+                        <a href="#progress">Разработка</a>
+                        <a href="#community">Сообщество</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Поддержка</h4>
+                        <a href="https://dsc.gg/realrussia" target="_blank">Discord</a>
+                        <a href="https://t.me/realhubgames" target="_blank">Telegram</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="#" id="report-btn">Сообщить о проблеме</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Real Hub Games Project. Все права защищены.</p>
+                <div class="footer-contacts" style="padding: 10px 0;">
+                    <p style="margin: 0; color: #a0a0a0;">Контакты:
+                        <a href="mailto:moinoytbyk@gmail.com"
+                            style="color: #e50914; text-decoration: none; font-weight: bold; margin: 0 5px;">moinoytbyk@gmail.com</a>
+                        |
+                        <a href="tel:+996221509499"
+                            style="color: #e50914; text-decoration: none; font-weight: bold; margin: 0 5px;">+996 221
+                            509 499</a>
+                    </p>
+                </div>
+                <p class="footer-status"><span class="badge-dot small"></span> Сервер в разработке</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- Download Modal -->
+    <div class="modal" id="download-modal">
+        <div class="modal-box" style="text-align: center;">
+            <button class="modal-close" id="close-download">✕</button>
+            <div class="modal-icon" style="font-size: 4rem; margin-bottom: 20px;">⌛</div>
+            <h3 style="font-size: 2rem; margin-bottom: 15px;">Ждите открытия!</h3>
+            <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 20px;">
+                Запуск проекта и доступ к лаунчеру откроются <strong>10 апреля 2026 года</strong>.
+            </p>
+            <p class="modal-note" style="font-size: 1rem;">Или вступай в наш <a href="https://dsc.gg/realrussia"
+                    target="_blank">Discord</a> для общения и свежих новостей!</p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
